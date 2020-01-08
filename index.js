@@ -26,7 +26,7 @@ Structures.extend('Guild', Guild => {
 
 const client = new CommandoClient({
   commandPrefix: prefix,
-  owner: '183647046564184065' // change this to your Discord user ID
+  owner: '435683636252246019' // change this to your Discord user ID
 });
 
 client.registry
@@ -43,11 +43,11 @@ client.registry
 
 client.once('ready', () => {
   console.log('Ready!');
-  client.user.setActivity('!help for commands', 'WATCHING');
+  client.user.setActivity('Đang đụ Berus | #help', 'WATCHING');
 });
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(c => c.name === 'general'); // change this to the channel name you want to send the greeting to
+  const channel = member.guild.channels.find(c => c.name === 'welcome-to-discord'); // change this to the channel name you want to send the greeting to
   if (!channel) return;
   channel.send(`Welcome ${member}!`);
 });
